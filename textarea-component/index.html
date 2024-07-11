@@ -19,16 +19,61 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="icon" href="img/favicon.ico" sizes="any" />
-    <style>
+    <style>      
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .title {
+        font-weight: 600;
+      }
+      .title-container {
+        padding-bottom: 8px;
+      }
+
+      .characters-used-section {
+        display: flex;
+        justify-content: right;
+      }
+
+      .textarea {
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        background-color: whitesmoke;
+        resize: none;
+        width: 500px;
+        height: 200px;
+        padding: 12px 16px;
+      }
+
+      .textarea-container{
+        padding-bottom: 8px;
+      }
+
       /* You may write styles inside this <style> tag or within `css/style.css`. */
     </style>
   </head>
   <body>
     <!-- Add your site or application content here -->
-    <h1 class="text-5xl text-center font-semibold pt-20">
-      Hello world! Write your content here.
-    </h1>
-
+     <div class="container">
+       <div class="content">
+         <div class="flex title-container">
+           <span class="title">Description</span>
+         </div>
+         <div class="flex textarea-container">
+           <textarea 
+           class="textarea" 
+           placeholder="Write your message..." 
+           required
+           ></textarea>  
+         </div>
+         <div class="flex characters-used-section">
+           <span class="characters-used">0/500</span>
+         </div>
+       </div>
+     </div>
     <!-- Attribute this challenge to yourself! -->
     <div class="credits">
       A challenge by
